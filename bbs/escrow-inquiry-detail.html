@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <title>에스크로 전체 조회 | Gtradepay :: GLOBAL TRADE PAYMENT </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/mobile_shop.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script>
+        // 자바스크립트에서 사용하는 전역변수 선언
+        var g5_url = "https://www.gtradepayments.com/home";
+        var g5_bbs_url = "index.htmlbbs";
+        var g5_is_member = "1";
+        var g5_is_admin = "";
+        var g5_is_mobile = "1";
+        var g5_bo_table = "gtp_chinatrade"; 
+        var g5_sca = "";
+        var g5_editor = "";
+        var g5_cookie_domain = ".gtradepayments.com";
+        var g5_shop_url = "index.htmlshop";
+        var g5_theme_shop_url = "../css/shop";
+    </script>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/wrest.js"></script>
+    <script src="../js/modernizr.custom.70111.js"></script>
+
+    <script src="../js/Ublue-jQueryTabs-1.2.js"></script>
+</head>
+
+<body>
+    <div id="hd_login_msg">chinatrade님 로그인 중 <a href="login.html">로그아웃</a></div>
+    <!-- Navigation section  -->
+
+
+    <div id="container">
+        <div id="container_wr">
+
+
+
+            <!--본문-->
+            <div id="con_left">
+                <!--h1 id="container_title"><span>계약명 - 에스크로 거래등록 (Import) > chinatrade</span></h1-->
+                <script src="https://www.gtradepayments.com/home/js/viewimageresize.js"></script>
+
+                <div id="container_title"><span>에스크로 계약 신청 내용</span></div>
+
+                <div style=" height:1px; width:100%; background:#CCC; margin:10px 0px"></div>
+
+                <article id="bo_v" style="width:100%">
+                    <header>
+                        <h1><span class="bo_cate_link">Importer </span> <span id="bo_v_title">계약명 : 계약명 - 에스크로 거래등록 (Import)</span></h1>
+                    </header>
+
+
+                    <section id="bo_v_atc">
+                        <h2 id="bo_v_atc_title">본문</h2>
+                        <h3>거래정보</h3>
+                        <ul>
+                            <li>
+                                <dl class="col3">
+                                    <dt>등록일</dt>
+                                    <dd>2019/01/01</dd>
+                                    <dt>계약일</dt>
+                                    <dd>2019/01/01</dd>
+                                    <dt>계약완료일</dt>
+                                    <dd>2019/01/01</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>거래처 이메일</dt>
+                                    <dd><input type="email" value="" class="frm_input" placeholder=""></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="col3">
+                                    <dt>계약번호</dt>
+                                    <dd><input type="text" value="" class="frm_input" placeholder=""></dd>
+                                    <dt>통관번호</dt>
+                                    <dd><input type="text" value="" class="frm_input" placeholder=""></dd>
+                                    <dt>HsCode</dt>
+                                    <dd><input type="text" value="" class="frm_input" placeholder=""></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="col2">
+                                    <dt>현재 상태</dt>
+                                    <dd>
+                                        <span class="pro-receipt">계약접수</span>
+                                        <span class="pro-wait">승인대기</span>
+                                    </dd>
+
+                                    <dt>입금액</dt>
+                                    <dd>
+                                        <input type="text" value="" class="frm_input" placeholder="">
+                                        <select name="wr_5" id="wr_5">
+                                            <option value="">선택</option>
+                                            <option value="RMB">RMB</option>
+                                            <option value="KRW">KRW</option>
+                                            <option value="USD">USD</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="HKD">HKD</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <h3>거래 등록 정보</h3>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>거래내용</dt>
+                                    <dd>
+                                        <textarea maxlength="100" style="width:100%;height:100px" placeholder="Gtrade 거래 하렵니다."></textarea>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="file-att">
+                                    <dt>첨부서류</dt>
+                                    <dd>
+                                        <div><strong>무역 견적서</strong><input type="file" value="" class="frm_file"></div>
+                                        <div><strong>Invoice</strong><input type="file" value="" class="frm_file"></div>
+                                        <div>
+                                            <span>
+                                                <strong>통장사본</strong>
+                                                <a href="#myModal" data-toggle="modal">열기</a>
+                                            </span>
+                                            <span>
+                                                <strong>증빙서류 1</strong>
+                                                <a href="">열기</a>
+                                            </span>
+                                            <span>
+                                                <strong>증빙서류 2</strong>
+                                            </span>
+                                            <span>
+                                                <strong>증빙서류 2</strong>
+                                            </span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <h3>수수료</h3>
+                        <ul>
+                            <li>
+                                <div class="fees">
+                                    <span>
+                                        <strong>에스크로 수수료:</strong> 0.5 %
+                                    </span>
+                                    <span>
+                                        <strong>MP수수료 : </strong>0.05 %
+                                    </span>
+                                    <span>
+                                        <strong>현지 은행수수료</strong>100 RMB
+                                    </span>
+                                    <span>
+                                        <strong>송금수수료 : </strong>20 USD
+                                    </span>
+                                    <span>
+                                        <strong>통관수수료 : </strong>1 USD
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+
+
+                <!-- 첨부파일 팝업 -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">통장사본</h4>
+                            </div>
+                            <div class="modal-body">
+                              <img src="http://www.jesuson.net/images/%ED%86%B5%EC%9E%A5%EC%82%AC%EB%B3%B8.jpg" alt="통장사본">
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-dismiss="modal" class="btn btn-cancel">닫기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('.btn-deposit').click(function () {
+                        $('#myModal').modal('hide')
+                    });
+                </script>
+                <!-- //첨부파일 팝업 -->
+
+                <div class="btn-wrap">
+                    <a href="escrow-inquiry-detail_step2.html" class="btn_submit">수정</a>
+                    <a href="" class="btn_cancel">취소</a>
+                </div>
+
+
+                <!-- 게시글 보기 끝 -->
+
+
+            </div>
+            <!--본문-->
+            <!--SNB AREA-->
+            <aside id="con_right">
+                <!-- 로그인 후 아웃로그인 시작 { -->
+                <div class="menu_a1">
+
+                    <div class="menu_a2">
+                        chinatrade님 LOGIN
+
+                    </div>
+                    <div class="menu_a3">
+                    </div>
+                    <div class="menu_a5">
+
+                        <span><a href="register_form.html"
+                                title="정보수정">EDIT</a></span><span style="padding-left:20px"><a href="login.html">LOGOUT</a></span>
+                    </div>
+
+                </div>
+                <!-- } 로그인 후 아웃로그인 끝 -->
+                
+                <div class="menu_a1">
+
+                    <div class="menu_a2">Trade ​수출입 기업</div>
+                    <div class="menu_a3">에스크로 서비스</div>
+                    <div class="menu_a4"><a href="escrow-apply.html">에스크로 계약 신청</a></div>
+                    <div class="menu_a3">에스크로 조회</div>
+                    <div class="menu_a4"><a href="escrow-inquiry.html">에스크로 전체조회</a></div>
+                    <div class="menu_a4"><a href="payment-plan-inquiry.html">결제예정 정보조회</a></div>
+                    <div class="menu_a4"><a href="payment-complete-inquiry.html">결제완료 정보조회</a></div>
+                    <div class="menu_a3">무역자금대출</div>
+                    <div class="menu_a4"><a href="loan-inquiry.html">대출조회</a></div>
+                    <div class="menu_a4"><a href="loan-approval-request.html">대출승인요청</a></div>
+
+                </div>
+
+                <div class="btn-escrow-apply">
+                    <a href="escrow-apply.html" style="color:#FFF"><b>Get
+                            started now</b></a></div>
+                <div style="clear:both; height:20px "></div>
+                
+                <!--div id="idx_cs">
+                <h2 class="con_tit"><a href="index.htmlbbs/faq.php">CS CENTER</a></h2>
+                <p>
+                                        <strong class="cs_tel"></strong>
+                    <p class="cs_info"></p>
+                </p>
+            </div-->
+
+
+            </aside>
+            <!--SNB AREA-->
+
+        </div>
+
+
+    </div><!-- container End -->
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!--script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script-->
+    <script src="../js/jquery.parallax.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/custom.js"></script>
+
+
+
+    <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+    <!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+
+</html>
+
+<!-- 사용스킨 : theme/trade_info1 -->

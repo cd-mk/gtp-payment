@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <title>에스크로 전체 조회 | Gtradepay :: GLOBAL TRADE PAYMENT </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/admin.css">
+
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.custom.70111.js"></script>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <header class="gnb">
+            <div class="header_inner">
+			<img src="img/logo.webp" alt="Gtradepay">
+			<div id="container_title"><span>에스크로 계약 신청 내용</span></div>
+			</div>
+        </header>
+        <div id="container_wr">
+            <!--본문-->
+                <div class="content">
+                
+                    <form name="fboardlist" id="fboardlist" action="" method="post">
+                        <div class="bo_fx">
+                            <div class="btn_bo_adm">
+                                <select>
+                                    <option value="">상태</option>
+                                    <option value="RMB">계약접수</option>
+                                    <option value="KRW">심사완료</option>
+                                    <option value="USD">에스크로 입금대기</option>
+                                    <option value="JPY">에스크로 출금대기</option>
+                                    <option value="HKD">에스크로 출금완료</option>
+                                </select>
+                                <select>
+                                    <option value="RMB">전체</option>
+                                    <option value="RMB">수출</option>
+                                    <option value="KRW">수입</option>
+                                </select>
+                            </div>
+                            <div class="btn_bo_user">
+                            <!-- 게시물 검색-->
+                            <fieldset id="bo_sch">
+                                <legend>게시물 검색</legend>
+                            
+                                <form name="fsearch" method="get">
+                                    <input type="hidden" name="bo_table" value="gtp_chinatrade">
+                                    <input type="hidden" name="sca" value="">
+                                    <input type="hidden" name="sop" value="and">
+                                    <label for="sfl" class="sound_only">검색대상</label>
+                                    <select name="sfl" id="sfl">
+                                        <option value="wr_subject">전체</option>
+                                        <option value="wr_subject">계약명</option>
+                                        <option value="mb_id||wr_2">회원아이디</option>
+                            
+                                    </select>
+                                    <input name="stx" placeholder="검색어를 입력해 주세요" required id="stx" class="required frm_input" size="15" maxlength="20">
+                                    <input type="submit" value="검색" class="btn_sch">
+                                </form>
+                            </fieldset>
+                            <!-- 게시물 검색-->
+                            </div>
+                        </div>
+                
+                
+                        <div class="tbl_head01 tbl_wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">No</th>
+                                        <th scope="col" rowspan="2">상태</th>
+                                        <th scope="col" rowspan="2">구분</th>
+                                        <th scope="col">아이디</th>
+                                        <th scope="col" rowspan="2">계약명</th>
+                                        <th scope="col" rowspan="2">계약일</th>
+                                        <th scope="col" rowspan="2">무역견적서</th>
+                                        <th scope="col" rowspan="2">invoice</th>
+                                        <th scope="col" colspan="4">거래처 입력</th>
+                                        <th scope="col" colspan="3">첨부서류</th>
+                                        <th scope="col" rowspan="2">비고</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">닉네임</th>
+                                        <th scope="col">HSCODE</th>
+                                        <th scope="col">계약번호</th>
+                                        <th scope="col">통관구분</th>
+                                        <th scope="col">B/L</th>
+                                        <th scope="col">통장사본</th>
+                                        <th scope="col">증빙서류</th>
+                                        <th scope="col">증빙서류</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">2</td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2">수입</td>
+                                        <td>아이디</td>
+                                        <td rowspan="2"><a href="mgt-escrow-detail.html">Mobile appliance K203-21</a></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"><a href="#myModal" class="btn click" data-toggle="modal">Click</a></td>
+                                        <td rowspan="2"><a href="#myModal1" class="btn click" data-toggle="modal">Click</a></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>닉네임</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">1</td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2">수출</td>
+                                        <td>아이디</td>
+                                        <td rowspan="2"><a href="mgt-escrow-detail.html">Mobile appliance K203-21</a></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"><a href="#myModal" class="btn click" data-toggle="modal">Click</a></td>
+                                        <td rowspan="2"><a href="#myModal1" class="btn click" data-toggle="modal">Click</a></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"><a href="#url" class="btn download">다운로드</a></td>
+                                        <td rowspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>닉네임</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <!-- 첨부파일 팝업 -->
+                <!-- 무역견적서 -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">무역견적서</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="http://1.bp.blogspot.com/-uIV7OUwtbYU/VESRkUGRfPI/AAAAAAAAAIw/jAxhc3QB-CU/s1600/Invoices_Proforma_Invoice1.jpg" alt="무역견적서">
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-dismiss="modal" class="btn btn-cancel">닫기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- invoice -->
+                <div class="modal" id="myModal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Invoice</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="http://www.bizforms.co.kr/form_preview/form_12632.gif" alt="송장">
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-dismiss="modal" class="btn btn-cancel">닫기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //첨부파일 팝업 -->
+                
+            <!--//본문-->
+
+        </div>
+
+
+    </div><!-- container End -->
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!--script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script-->
+    <script src="../js/jquery.parallax.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/custom.js"></script>
+
+
+
+    <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+    <!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+
+</html>
+
+<!-- 사용스킨 : theme/trade_info1 -->

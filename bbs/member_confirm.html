@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<title>회원 비밀번호 확인 | Gtradepay :: GLOBAL TRADE PAYMENT </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link type="text/css" href="../css/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="../css/jquery-ui/style.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/mobile_shop.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/modernizr.custom.70111.js"></script>
+</head>
+<body>
+<div id="hd_login_msg">chinatrade님 로그인 중 <a href="login.html">로그아웃</a></div>
+<!-- Navigation section  -->
+
+
+<div id="container">
+    <div id="container_wr">
+
+    
+    
+        <!-- 쇼핑몰왼쪽 배너 시작 { -->
+                <!-- } 쇼핑몰왼쪽 배너 끝 -->
+   
+            <!--h1 id="container_title"><span>회원 비밀번호 확인</span></h1-->
+<div id="mb_login" class="mbskin">
+    <h1><a href="https://www.gtradepayments.com/home/shop"><img src="https://www.gtradepayments.com/home/data/common/logo_img" alt="Gtradepay :: GLOBAL TRADE PAYMENT  메인"></a></h1>
+    <div class="mbskin_wr">
+        <h2>회원 비밀번호 확인</h2>
+
+    <p>
+        <strong>비밀번호를 한번 더 입력해주세요.</strong>
+                <br />회원님의 정보를 안전하게 보호하기 위해 비밀번호를<br /> 한번 더 확인합니다.
+            </p>
+    
+    <form name="fmemberconfirm" action="register_form.php" onsubmit="return fmemberconfirm_submit(this);" method="post">
+    <input type="hidden" name="mb_id" value="chinatrade">
+    <input type="hidden" name="w" value="u">
+    
+    <fieldset>
+    <div style=" width:100%;">
+        <div style="height:20px"></div>
+        <span style="font-size:1.4em;">회원아이디 : chinatrade</span>
+        <div style="height:10px"></div>
+        <div style="width:100%; text-align:center">
+        <input type="password" name="mb_password" id="mb_confirm_pw" placeholder="비밀번호(필수)" required class="frm_input" >
+        <br />
+        <input type="submit" value="확인" id="btn_submit" class="btn_submit">
+        </div>
+    </div>
+    </fieldset>
+
+    </form>
+
+    <div class="btn_join">
+        <a href="https://www.gtradepayments.com/home">메인으로 돌아가기</a>
+    </div>
+
+ 
+
+
+
+	</div>
+</div>
+
+<script>
+function fmemberconfirm_submit(f)
+{
+    document.getElementById("btn_submit").disabled = true;
+
+    return true;
+}
+</script>
+        
+    </div>
+
+
+</div><!-- container End -->
+
+
+
+
+<!-- SCRIPTS -->
+
+<!--script src="https://www.gtradepayments.com/home/theme/someday_o/js/jquery.js"></script>
+<script src="https://www.gtradepayments.com/home/theme/someday_o/js/bootstrap.min.js"></script-->
+<script src="https://www.gtradepayments.com/home/theme/someday_o/js/jquery.parallax.js"></script>
+<script src="https://www.gtradepayments.com/home/theme/someday_o/js/smoothscroll.js"></script>
+<script src="https://www.gtradepayments.com/home/theme/someday_o/js/custom.js"></script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>

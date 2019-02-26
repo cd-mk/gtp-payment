@@ -1,0 +1,540 @@
+/*
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+*/
+
+
+/*---------------------------------------
+    Typorgraphy              
+-----------------------------------------*/
+
+@charset "utf-8";
+@font-face {
+	font-family: 'open sans';
+	font-weight: 400;
+	src: url(../../font/OpenSans-Regular.eot);
+	src: url(../../font/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
+			url(../../font/OpenSans-Regular.woff2) format('woff2'),
+			url(../../font/OpenSans-Regular.woff) format('woff'),
+			url(../../font/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'open sans';
+	font-weight: 700;
+	src: url(../../font/OpenSans-Bold.eot);
+	src: url(../../font/OpenSans-Bold.eot?#iefix) format('embedded-opentype'),
+			url(../../font/OpenSans-Bold.woff2) format('woff2'),
+			url(../../font/OpenSans-Bold.woff) format('woff'),
+			url(../../font/OpenSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-weight: 400;
+	src: url(../../font/nanum-gothic-v13-korean-regular.eot);
+	src: url(../../font/nanum-gothic-v13-korean-regular.eot?#iefix) format('embedded-opentype'),
+			url(../../font/nanum-gothic-v13-korean-regular.woff2) format('woff2'),
+			url(../../font/nanum-gothic-v13-korean-regular.woff) format('woff'),
+			url(../../font/nanum-gothic-v13-korean-regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-weight: 700;
+	src: url(../../font/nanum-gothic-v13-korean-700.eot);
+	src: url(../../font/nanum-gothic-v13-korean-700.eot?#iefix) format('embedded-opentype'),
+			url(../../font/nanum-gothic-v13-korean-700.woff2) format('woff2'),
+			url(../../font/nanum-gothic-v13-korean-700.woff) format('woff'),
+			url(../../font/nanum-gothic-v13-korean-700.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'avenir light';
+	src: url(../../font/avenir-lt-w01_35-light.woff2) format('woff2');
+}
+/* 초기화 */
+html {overflow-y:scroll;height:100%}
+body {margin:0;padding:0;font-size:14px;height:100%;font-family:'Nanum Gothic', Microsoft YaHei,Tahoma,\5b8b\4f53,helvetica,sans-serif;min-width:320px;padding: 0;margin:0;}
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+header ul, nav ul, footer ul {margin:0;padding:0;list-style:none}
+legend {position:absolute;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
+label, input, button, select, img {vertical-align:middle}
+input, button {margin:0;padding:0;font-size:1em;}
+button,input[type=submit]{cursor:pointer;font-family:'Nanum Gothic', Microsoft YaHei,Tahoma,\5b8b\4f53,helvetica,sans-serif;}
+input[type=text], input[type=password], input[type=submit], input[type=image], button {border-radius:0;font-size:1em;-webkit-appearance:none}
+textarea, select {font-size:14px;font-family: 'Nanum Gothic', sans-serif;}
+textarea {border-radius:0;-webkit-appearance:none}
+p {margin:0;padding:0;word-break:break-all}
+hr {display:none}
+pre {overflow-x:scroll;font-size:1.1em}
+a:link, a:visited {color:#000;text-decoration:none}
+a:hover, a:active, a:focus {
+  color: #bc0f0f;
+  outline: none;
+}
+ul,li,ol,dt,dd,dl{list-style:none;padding:0;margin:0;}
+select {height:30px;line-height:30px;}
+*, :after, :before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6 {
+
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 62px;
+    padding-bottom: 14px;
+    margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h2,h3 {
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+p, a {
+    color: #777;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+}
+
+.btn-success:focus {
+  background-color: #000;
+  border-color: transparent;
+}
+
+
+/*---------------------------------------
+    General               
+-----------------------------------------*/
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #666;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+a:hover, a:active, a:focus {
+  color: #bc0f0f;
+  outline: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.msg_sound_only, .sound_only {display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+caption, legend {display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#about, 
+#gallery,
+#contact,
+#blog, 
+#blog-single-post {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.main-about,
+.main-single-post,
+.main-gallery,
+.main-contact {
+  height: 65vh;
+}
+
+.overlay {
+  background: #01426A;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  overflow: hidden;
+}
+
+
+/*---------------------------------------
+    Preloader section              
+-----------------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #ffffff;
+}
+
+.sk-spinner-wordpress.sk-spinner {
+  background-color: #bfba55;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: relative;
+  -webkit-animation: sk-innerCircle 1s linear infinite;
+  animation: sk-innerCircle 1s linear infinite; 
+}
+
+.sk-spinner-wordpress .sk-inner-circle {
+  display: block;
+  background-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 8px;
+  top: 5px;
+  left: 5px; 
+}
+
+@-webkit-keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+
+
+
+
+.guide-text {font-size:13px;color:#bc0f0f;line-height: 1.5;}
+.required_star {display:inline-block !important;position: relative;font-size: 0;}
+.required_star:before {content:"*";font-size:16px;color: #bc0f0f;display:inline-block !important;clear: both;padding-left:4px;}
+.btn-wrap {margin-top:60px;margin-bottom:60px;}
+.btn-wrap.center {text-align: center}
+
+.tbl-in {
+  padding:0 12px;
+  height:30px;
+  line-height: 30px;
+  border: 0;
+  font-size: 13px;
+  margin:0 4px;
+}
+.tbl-in.type-1 {
+  background: #333;
+  color: #fff;
+}
+.tbl-in.type-2 {
+  background: #48618f;
+  color: #fff;
+}
+.tbl_head01 tbody td .category-importer {color:#1930a9 !important;font-size:12px;font-weight:700;}
+.tbl_head01 tbody td .category-exporter {color:#bc0f0f !important;font-size:12px;font-weight:700;}
+.tbl_head01 tbody td.td_date {text-align:center;}
+.tbl_head01 tbody td.td_acc {text-align:center;}
+.tbl_head01 tbody td.td_price {text-align:right;}
+
+.tbl_head01 tbody td .condition-1 {padding:5px;margin:5px 0px; text-align:center}
+.tbl_head01 tbody td .condition-2 {text-align:center; padding:5px;font-size:0.8em;line-height: 1.4;}
+.tbl_head01 tbody td .condition-2 a {line-height: 1.4;}
+.tbl_head01 tbody td.pro-waiting .condition-1 {background:#306; color:#FF3;}
+.tbl_head01 tbody td.pro-waiting .condition-2 {background: #FFDFD0;color: #000;}
+
+.tbl_head01 tbody td.pro-possible .condition-1 {background:#306;color:#FF3;}
+.tbl_head01 tbody td.pro-possible .condition-2 {background: #FF9;color: #000;}
+
+
+.tbl_head01 tbody td.pro-end .condition-1 {background:#FC0;color:#000;}
+.tbl_head01 tbody td.pro-end .condition-2 {background:#bc0f0f;color: #fff;}
+.tbl_head01 tbody td.pro-end .condition-2 a {color: #fff;}
+
+.tbl_head01 tbody td.pro-pass .condition-1 {background:#0099FF;color:#fff;}
+.tbl_head01 tbody td.pro-pass .condition-2 {background:#bc0f0f; color: #fff;}
+.tbl_head01 tbody td.pro-pass .condition-2 a {color:#fff;}
+
+.tbl_head01 tbody td.pro-pass-waiting .condition-1 {background:#0099FF;color:#fff;}
+.tbl_head01 tbody td.pro-pass-waiting .condition-2 {background: #FFDFD0; color: #000; }
+
+
+.tbl_head01 tbody td.pro-es-e-waiting .condition-1 {background:#0099FF;color:#fff;}
+.tbl_head01 tbody td.pro-es-e-waiting .condition-2 {background: #FFDFD0; color: #000;}
+
+.tbl_head01 tbody td.pro-es-waiting .condition-1 {background:#0099FF; color:#fff;}
+.tbl_head01 tbody td.pro-es-waiting .condition-2 {background:#bc0f0f;color: #fff;}
+.tbl_head01 tbody td.pro-es-waiting .condition-2 a {color:#fff;}
+
+
+.btn-active.add {
+    width: 35px;
+    height: 30px;
+    background: #333;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    vertical-align: top;
+    font-size: 0;
+    position: relative;
+    display:inline-block;
+    border:0;
+}
+.btn-active.del {
+    width: 35px;
+    height: 30px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    vertical-align: top;
+    font-size: 0;
+    position: relative;
+    display:inline-block;
+    margin-top:5px;
+}
+
+.btn-active.add:before{content: "+";clear:both;display:block;position:absolute;font-size: 18px;color:#fff;left:10px;font-weight: 700;}
+.btn-active.del:before{content: "-";clear:both;display:block;position:absolute;font-size: 24px;color:#222;left:10px;font-weight: 700;}
+
+/* 무역자금 대출조회 */
+.loan-pro-accept {background:#306; padding:5px; color:#fff;margin:5px 0px; text-align:center}
+.loan-pro-wait {background:#FC0; padding:5px; color:#fff;margin:5px 0px; text-align:center}
+
+.btn-escrow-apply {background:#06C;font-size:2.1em; width:100%; padding:20px; text-align:center;border-radius:10px;}
+
+/* 애스크로신청 */
+.attach-wr {border:1px solid #ddd;padding:20px;margin:10px 0;}
+.req {color:#bc0f0f;}
+
+.modal-dialog h4 {font-size:20px;color:#111;font-weight:bold;}
+.modal-footer {text-align: center;margin-top:0;}
+.modal-footer .btn {border:1px solid #ccc;}
+.modal-body {
+    position: relative;
+    padding: 15px;
+    text-align: center;
+}
+.modal-body img {max-width:100%;}
+.deposit {background:#f5f5f5;padding:20px;margin:40px;}
+.deposit li {margin-top:10px;}
+
+#bo_v_atc h3 {background:#b7d4e5;padding:10px;font-size:15px;margin-top:20px;}
+#bo_v_atc h3:first-child {margin-top:0;}
+#bo_v_atc dl {display: table;width: 100%;}
+#bo_v_atc dt, #bo_v_atc dd {display:table-cell;}
+#bo_v_atc li {margin-top:25px;}
+
+#bo_v_atc dt {font-weight: 700;vertical-align: top;margin-right:10px;}
+#bo_v_atc dd {width:90%} 
+#bo_v_atc .col3 dd {width:26%} 
+#bo_v_atc .col2 dd {width:43%} 
+
+#bo_v_atc .pro-receipt {background:#333; padding:5px; color:#fff;margin:5px 0px; text-align:center}
+#bo_v_atc .pro-wait {background:#bc0f0f; padding:5px; color:#fff;margin:5px 0px; text-align:center}
+
+#bo_v_atc .file-att input[type=file] {display:inline-block;}
+#bo_v_atc .file-att strong {display: inline-block;margin-right:8px;}
+#bo_v_atc .file-att span a {background: #777;color:#fff;font-size:12px;padding:5px 10px;}
+#bo_v_atc .file-att span {margin-right:35px;}
+#bo_v_atc .file-att div {margin-top:20px;}
+#bo_v_atc .file-att div:first-child {margin-top:0;}
+#bo_v_atc .fees {margin-top:20px;}
+#bo_v_atc .fees strong {display: inline-block;margin-right:8px;}
+#bo_v_atc .fees span {margin-right:35px;}
+#bo_v_atc .fees:first-child {margin-top:0;}
+
+/* 기본테이블 */
+.tbl_wrap {margin:0 auto;width:90%;}
+.tbl_wrap table {width:100%;border-collapse:collapse;border-spacing:0}
+.tbl_wrap caption {padding:10px 0;color:#4b8b99;font-weight:bold;text-align:left}
+
+.tbl_head01 {}
+.tbl_head01 caption {padding:0 0 10px;color:#777;text-align:left}
+.tbl_head01 thead th {padding:12px 0;border:0;border-top:1px  solid #000;;border-bottom:1px solid #000;color:#000;font-size:0.95em;text-align:center;letter-spacing:-0.1em}
+.tbl_head01 thead th a{color:#000}
+.tbl_head01 thead a {color:#383838}
+.tbl_head01 thead th input {vertical-align:top} /* middle 로 하면 게시판 읽기에서 목록 사용시 체크박스 라인 깨짐 */
+.tbl_head01 tfoot th {border-top:1px solid #666;border-bottom:1px solid #666;background:#484848;color:#fff}
+.tbl_head01 tfoot td {border-color:#666;background:#484848;color:#fff;font-weight:bold}
+.tbl_head01 tbody th {padding:5px 0;border-top:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9}
+.tbl_head01 tbody td {padding:3px;border-top:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;line-height:1.5em;word-break:break-all;text-align:center}
+
+/* 게시판 목록 공통 */
+.bo_fx {width:90%;margin:20px auto;}
+.bo_fx:after {display:block;visibility:hidden;clear:both;content:""}
+.bo_fx ul {margin:0;padding:0;list-style:none}
+#bo_list_total {float:left;padding:0;height:2.5em;line-height:2.5em}
+.btn_bo_user {float:right;margin:0;padding:0;list-style:none}
+.btn_bo_user li {float:left;margin-left:5px}
+.btn_bo_adm {float:left}
+.btn_bo_adm li {float:left;margin-right:5px}
+.btn_bo_adm input {padding:8px;border:0;background:#efeff0;color:#777;font-size:0.92em;text-decoration:none;vertical-align:middle}
+.bo_notice td {background:#f7f7f7}
+.bo_notice td a {font-weight:bold}
+.td_num strong {color:#000}
+/*.bo_cate_link {display:inline-block;margin:0 3px 0 0;padding:0 6px 0 0;border-right:1px solid #e7f1ed;color:#999 !important;font-weight:bold;text-decoration:none} /* 글제목줄 분류스타일 */*/
+.bo_current {color:#e8180c}
+.td_subject img {margin-left:3px}
+.cnt_cmt {font-weight:bold}
+
+#bo_sch {margin-bottom:10px;padding-top:5px;text-align:center}
+#bo_sch select{height:30px;}
+#bo_sch .btn_sch{height:30px;border:0;background:#444;color:#fff;padding:0 5px}
+
+
+
+
+.btn-wrap {text-align: center;}
+.btn-wrap .btn_submit {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+
+    font-weight: bold;
+    display:inline-block;
+    color:#fff;
+    background:#333;
+}
+.btn-wrap .btn_cancel{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+     display:inline-block;
+     border:1px solid #ddd;
+     color:#111;
+
+}
+
+.gnb {
+    width: 100%;
+    min-width: 980px;
+    background: #01426a;
+    height:80px;
+    line-height:80px;
+}
+.gnb .header_inner {width:950px;margin: 0 auto;position: relative;}
+.frm_input {
+    border: 1px solid #c1c1c1;
+    background: #fff;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    padding: 0 6px;
+    width: 50%;
+}
+#container_title {
+    text-align: center;
+    font-family: 'Nanum Gothic',Microsoft YaHei,Tahoma,\5b8b\4f53,helvetica,sans-serif;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
+    position: absolute;
+    top:0;
+    right:0;
+    color:#fff;
+}
+
+#container_wr {width:100%;}
+#bo_v {width:950px;margin: 0 auto;position: relative;}
+#bo_v .bo_cate_link {
+    display: inline-block;
+    padding: 0 7px;
+    border: 2px solid #993355;
+    color: #993355;
+    font-size: 0.22em;
+    line-height: 19px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+#bo_v_title {
+    display: block;
+    font-size: 0.3em;
+    font-family: 'Nanum Gothic',sans-serif;
+    font-weight: bold;
+    line-height: 1.3em;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+#bo_v_atc_title {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+input[type="text"]:disabled {
+  background: #dddddd;
+}
+.btn.download {
+    height: 25px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    text-align: center;
+    line-height: 25px;
+    display:inline-block;
+    border-radius: 0;
+    padding:0 8px;
+}

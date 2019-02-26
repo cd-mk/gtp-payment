@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <title>chinatrade 글쓰기 | Gtradepay :: GLOBAL TRADE PAYMENT </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link type="text/css" href="../css/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="../css/jquery-ui/style.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/mobile_shop.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/modernizr.custom.70111.js"></script>
+</head>
+
+<body>
+    <div id="hd_login_msg">chinatrade님 로그인 중 <a href="login.html">로그아웃</a></div>
+    <!-- Navigation section  -->
+
+
+    <div id="container">
+        <div id="container_wr">
+
+
+            <!-- 본문 시작 -->
+            <div id="con_left">
+                <!--h1 id="container_title"><span>chinatrade 글쓰기</span></h1-->
+                <!-- skin : theme/trade_loan -->
+                <script>
+                    jQuery(function ($) {
+                        $.datepicker.regional["ko"] = {
+                            closeText: "닫기",
+                            prevText: "이전달",
+                            nextText: "다음달",
+                            currentText: "오늘",
+                            monthNames: ["1월(JAN)", "2월(FEB)", "3월(MAR)", "4월(APR)", "5월(MAY)", "6월(JUN)", "7월(JUL)", "8월(AUG)", "9월(SEP)", "10월(OCT)", "11월(NOV)", "12월(DEC)"],
+                            monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                            dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+                            dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+                            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                            weekHeader: "Wk",
+                            dateFormat: "yymmdd",
+                            firstDay: 0,
+                            isRTL: false,
+                            showMonthAfterYear: true,
+                            yearSuffix: ""
+                        };
+                        $.datepicker.setDefaults($.datepicker.regional["ko"]);
+                    });
+                </script>
+
+                
+                <section id="bo_w">
+                    <h2 id="container_title"><span>무역자금 대출승인요청</span></h2>
+
+                    <form name="fwrite" id="fwrite" action="index.htmlbbs/write_update.php"
+                        onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                        <input type="hidden" name="w" value="">
+                        <input type="hidden" name="bo_table" value="gtloan_chinatrade">
+                        <input type="hidden" name="wr_id" value="0">
+                        <input type="hidden" name="sca" value="">
+                        <input type="hidden" name="sfl" value="">
+                        <input type="hidden" name="stx" value="">
+                        <input type="hidden" name="spt" value="">
+                        <input type="hidden" name="sst" value="">
+                        <input type="hidden" name="sod" value="">
+                        <input type="hidden" name="page" value="">
+                        <input type="hidden" name="secret" value="secret">
+                        <div class="tbl_frm01 tbl_wrap">
+                            <table>
+                                <caption>chinatrade 글쓰기</caption>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="ca_name">수출/수입<strong class="required_star">필수</strong></label></th>
+                                        <td>
+                                            <select class="required" id="ca_name" name="ca_name" required>
+                                                <option value="">선택</option>
+                                                <option value="Exporter">Exporter</option>
+                                                <option value="Importer">Importer</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"><label for="wr_subject">대출 목적<strong class="required_star">필수</strong></label></th>
+                                        <td><input type="text" name="wr_subject" value="" id="wr_subject" required class="frm_input required"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">거래처 아이디<strong class="required_star">필수</strong></th>
+                                        <td><input type="text" name="wr_2" value="" id="wr_2" required class="frm_input required"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">거래처 이메일<strong class="required_star">필수</strong></th>
+                                        <td><input type="text" name="wr_6" value="" id="wr_6" required class="frm_input required"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">대출 금액<strong class="required_star">필수</strong></th>
+                                        <td><input type="text" name="wr_3" value="" id="wr_3" required class="frm_input required">
+                                            <select name="wr_5" id="wr_5" style="font-size:1.2em" required>
+                                                <option value="">선택</option>
+                                                <option value="RMB">RMB</option>
+                                                <option value="KRW">KRW</option>
+                                                <option value="USD">USD</option>
+                                                <option value="JPY">JPY</option>
+                                                <option value="HKD">HKD</option>
+                                                <option value="EUR">EUR</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <input type="hidden" name="wr_4" value="receipt">
+
+                                    <tr>
+                                        <th scope="row">첨부 서류 #1 <br>무역 견적서<strong class="required_star">필수</strong></th>
+                                        <td><input type="file" name="bf_file[]" title="파일첨부 1 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부 서류 #2 <br>Invoice<strong class="required_star">필수</strong></th>
+                                        <td><input type="file" name="bf_file[]" title="파일첨부 2 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부 서류 #3<br>은행통장사본</th>
+                                        <td>
+                                            <input type="file" name="bf_file[]" title="파일첨부 3 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                            <p class="guide-text">JPG, PDF 파일 첨부 가능.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부 서류 #4<br>기타증빙서류</th>
+                                        <td>
+                                            <input type="file" name="bf_file[]" title="파일첨부 4 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                            <p class="guide-text">JPG, PDF 파일 첨부 가능.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부 서류 #5<br>기타증빙서류</th>
+                                        <td><input type="file" name="bf_file[]" title="파일첨부 5 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input"></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>
+                                            <input type="file" name="bf_file[]" title="파일첨부 5 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                            <button type="button" onclick="add_item()" class="btn-active add">추가</button>
+
+                                            <!-- S : 추가 생성 -->
+                                            <div id="pre_set" style="display:none">
+                                                <input type="file" name="bf_file[]" title="파일첨부 5 :  용량 11,048,576 바이트 이하만 업로드 가능" class="frm_file frm_input">
+                                                <button type="button" onclick="remove_item(this)" class="btn-active del">삭제</button>
+                                            </div>
+                                            <!-- E : 추가 영역 -->
+
+                                            <div id="field"></div>
+                                            
+                                            <script type="text/javascript">
+                                                    function add_item() {
+                                                        // pre_set 에 있는 내용을 읽어와서 처리..
+                                                        var div = document.createElement('div');
+                                                        div.innerHTML = document.getElementById('pre_set').innerHTML;
+                                                        document.getElementById('field').appendChild(div);
+                                                    }
+
+                                                function remove_item(obj) {
+                                                    // obj.parentNode 를 이용하여 삭제
+                                                    document.getElementById('field').removeChild(obj.parentNode);
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"><label for="wr_content">신청내용</label></th>
+                                        <td class="wr_content">
+                                            <span class="sound_only">웹에디터 시작</span>
+                                            <textarea id="wr_content" name="wr_content" class="" maxlength="65536" style="width:100%;height:300px"></textarea>
+                                            <span class="sound_only">웹 에디터 끝</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <div class="btn_confirm">
+                            <div class="btn-wrap">
+                                <input type="submit" value="작성완료" id="btn_submit" class="btn_submit" accesskey="s">
+                                <a href="loan-inquiry.html" class="btn_cancel">취소</a>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+  
+
+                <script>
+                    function html_auto_br(obj) {
+                        if (obj.checked) {
+                            result = confirm("자동 줄바꿈을 하시겠습니까?\n\n자동 줄바꿈은 게시물 내용중 줄바뀐 곳을<br>태그로 변환하는 기능입니다.");
+                            if (result)
+                                obj.value = "html2";
+                            else
+                                obj.value = "html1";
+                        }
+                        else
+                            obj.value = "";
+                    }
+
+                    function fwrite_submit(f) {
+                        var wr_content_editor = document.getElementById('wr_content');
+                        if (!wr_content_editor.value) { alert("내용을 입력해 주십시오."); wr_content_editor.focus(); return false; }
+
+                        var subject = "";
+                        var content = "";
+                        $.ajax({
+                            url: g5_bbs_url + "/ajax.filter.php",
+                            type: "POST",
+                            data: {
+                                "subject": f.wr_subject.value,
+                                "content": f.wr_content.value
+                            },
+                            dataType: "json",
+                            async: false,
+                            cache: false,
+                            success: function (data, textStatus) {
+                                subject = data.subject;
+                                content = data.content;
+                            }
+                        });
+
+                        if (subject) {
+                            alert("거래명에 금지단어('" + subject + "')가 포함되어있습니다");
+                            f.wr_subject.focus();
+                            return false;
+                        }
+
+                        if (content) {
+                            alert("내용에 금지단어('" + content + "')가 포함되어있습니다");
+                            if (typeof (ed_wr_content) != "undefined")
+                                ed_wr_content.returnFalse();
+                            else
+                                f.wr_content.focus();
+                            return false;
+                        }
+
+                        if (document.getElementById("char_count")) {
+                            if (char_min > 0 || char_max > 0) {
+                                var cnt = parseInt(check_byte("wr_content", "char_count"));
+                                if (char_min > 0 && char_min > cnt) {
+                                    alert("내용은 " + char_min + "글자 이상 쓰셔야 합니다.");
+                                    return false;
+                                }
+                                else if (char_max > 0 && char_max < cnt) {
+                                    alert("내용은 " + char_max + "글자 이하로 쓰셔야 합니다.");
+                                    return false;
+                                }
+                            }
+                        }
+
+
+
+                    }
+                    $(function () {
+                        $("#wr_15").datepicker({
+                            showOn: "button",
+                            buttonImage: "../css/mobile/skin/board/trade_loan/img/calendar.png",
+                            buttonImageOnly: true, changeMonth: true, changeYear: true, dateFormat: "yymmdd", showButtonPanel: true, yearRange: "c-99:c+99"/*, minDate: "-0d"*/
+                        });
+
+                        $("#wr_1").datepicker({
+                            showOn: "button",
+                            buttonImage: "../css/mobile/skin/board/trade_loan/img/calendar.png",
+                            buttonImageOnly: true, changeMonth: true, changeYear: true, dateFormat: "yymmdd", showButtonPanel: true, yearRange: "c-99:c+99"/*, minDate: "-0d"*/
+                        });
+                    });
+                </script>
+
+
+            </div>
+           <!-- 본문 끝 -->
+           
+            <!--SNB AREA-->
+            <aside id="con_right">
+                <!-- 로그인 후 아웃로그인 시작 { -->
+                <div class="menu_a1">
+
+                    <div class="menu_a2">
+                        chinatrade님 LOGIN
+
+                    </div>
+                    <div class="menu_a3">
+                    </div>
+                    <div class="menu_a5">
+
+                        <span><a href="register_form.html"
+                                title="정보수정">EDIT</a></span><span style="padding-left:20px"><a href="login.html">LOGOUT</a></span>
+                    </div>
+
+                </div>
+                <!-- } 로그인 후 아웃로그인 끝 -->
+                
+                <div class="menu_a1">
+
+                    <div class="menu_a2">Trade ​수출입 기업</div>
+                    <div class="menu_a3">에스크로 서비스</div>
+                    <div class="menu_a4"><a href="escrow-apply.html">에스크로 계약 신청</a></div>
+                    <div class="menu_a3">에스크로 조회</div>
+                    <div class="menu_a4"><a href="escrow-inquiry.html">에스크로 전체조회</a></div>
+                    <div class="menu_a4"><a href="payment-plan-inquiry.html">결제예정 정보조회</a></div>
+                    <div class="menu_a4"><a href="payment-complete-inquiry.html">결제완료 정보조회</a></div>
+                    <div class="menu_a3">무역자금대출</div>
+                    <div class="menu_a4"><a href="loan-inquiry.html">대출조회</a></div>
+                    <div class="menu_a4"><a href="loan-approval-request.html">대출승인요청</a></div>
+
+                </div>
+
+                <div class="btn-escrow-apply">
+                    <a href="escrow-apply.html" style="color:#FFF"><b>Get
+                            started now</b></a></div>
+                <div style="clear:both; height:20px "></div>
+                
+                <!--div id="idx_cs">
+                <h2 class="con_tit"><a href="index.htmlbbs/faq.php">CS CENTER</a></h2>
+                <p>
+                                        <strong class="cs_tel"></strong>
+                    <p class="cs_info"></p>
+                </p>
+            </div-->
+
+
+            </aside>
+            <!--SNB AREA-->
+
+        </div>
+
+
+    </div><!-- container End -->
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!--script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script-->
+    <script src="../js/jquery.parallax.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/custom.js"></script>
+
+
+
+    <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+    <!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+
+</html>
